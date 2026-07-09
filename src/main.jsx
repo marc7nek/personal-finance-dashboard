@@ -14,9 +14,9 @@ import {
 } from 'lucide-react';
 import './styles.css';
 
-const currency = new Intl.NumberFormat('en-US', {
+const currency = new Intl.NumberFormat('pl-PL', {
   style: 'currency',
-  currency: 'USD',
+  currency: 'PLN',
   maximumFractionDigits: 0,
 });
 
