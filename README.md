@@ -2,6 +2,8 @@
 
 A responsive React dashboard for tracking personal income, expenses, category spending, and recent transaction activity.
 
+![A financial dashboard screenshot](dashboard-screenshot.png)
+
 ## Features
 
 - Monthly summary cards for net balance, income, expenses, and savings rate
