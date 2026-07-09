@@ -365,6 +365,17 @@ select:focus {
   width: min(230px, 100%);
 }
 
+.select-field {
+  grid-template-columns: 17px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
 .search-field svg,
 .select-field svg {
   position: absolute;
@@ -374,9 +385,31 @@ select:focus {
   transform: translateY(-50%);
 }
 
+.select-field svg {
+  position: static;
+  transform: none;
+}
+
 .search-field input,
-.select-field select {
+.search-field select {
   padding-left: 38px;
+}
+
+.select-field select {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.select-field:focus-within {
+  border-color: #1b4d89;
+  box-shadow: 0 0 0 3px rgba(27, 77, 137, 0.14);
+}
+
+.select-field select:focus {
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .transaction-table {
