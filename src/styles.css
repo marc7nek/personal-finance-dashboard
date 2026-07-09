@@ -1,0 +1,543 @@
+:root {
+  color: #172033;
+  background: #f5f7fb;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+}
+
+.topbar,
+.section-head,
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.topbar {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #667085;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: clamp(2rem, 5vw, 4.2rem);
+  line-height: 0.98;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 1.35rem;
+}
+
+h3 {
+  margin-bottom: 18px;
+  font-size: 1rem;
+}
+
+.icon-button,
+.primary-button,
+.delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+
+.text-button,
+.primary-button {
+  gap: 8px;
+  min-height: 44px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.text-button {
+  padding: 0 16px;
+  color: #172033;
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(16, 24, 40, 0.08);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.metric-card,
+.analytics-panel,
+.entry-panel,
+.transactions-section {
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(23, 32, 51, 0.06);
+}
+
+.metric-card {
+  min-height: 142px;
+  padding: 20px;
+}
+
+.metric-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 18px;
+  place-items: center;
+  border-radius: 8px;
+}
+
+.metric-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.metric-card span {
+  display: block;
+  margin-bottom: 5px;
+  color: #667085;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.metric-card strong {
+  font-size: 1.75rem;
+}
+
+.metric-card.blue .metric-icon {
+  color: #1b4d89;
+  background: #e8f1fb;
+}
+
+.metric-card.green .metric-icon {
+  color: #047857;
+  background: #dcfce7;
+}
+
+.metric-card.red .metric-icon {
+  color: #b42318;
+  background: #fee4e2;
+}
+
+.metric-card.gold .metric-icon {
+  color: #b7791f;
+  background: #fef3c7;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(300px, 0.8fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.analytics-panel,
+.entry-panel,
+.transactions-section {
+  padding: 22px;
+}
+
+.average-pill {
+  margin: 0;
+  padding: 8px 12px;
+  color: #1b4d89;
+  background: #e8f1fb;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.chart-block {
+  min-width: 0;
+}
+
+.bar-chart {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(34px, 1fr));
+  align-items: end;
+  gap: 12px;
+  height: 260px;
+}
+
+.bar-column {
+  display: grid;
+  grid-template-rows: 26px 1fr 20px;
+  gap: 8px;
+  min-width: 0;
+  height: 100%;
+  text-align: center;
+}
+
+.bar-value {
+  overflow: hidden;
+  color: #667085;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+}
+
+.bar-track {
+  display: flex;
+  align-items: end;
+  min-height: 0;
+  border-radius: 8px;
+  background: #eef2f6;
+  overflow: hidden;
+}
+
+.bar-fill {
+  width: 100%;
+  background: linear-gradient(180deg, #1b4d89, #2f855a);
+  border-radius: 8px 8px 0 0;
+}
+
+.bar-column span {
+  color: #667085;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.category-bars {
+  display: grid;
+  gap: 17px;
+}
+
+.category-label {
+  display: grid;
+  grid-template-columns: 14px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 7px;
+  color: #344054;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.progress-track {
+  height: 10px;
+  border-radius: 999px;
+  background: #eef2f6;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.entry-panel {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.entry-panel label,
+.search-field,
+.select-field {
+  display: grid;
+  gap: 7px;
+  color: #344054;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #172033;
+  background: #ffffff;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #1b4d89;
+  box-shadow: 0 0 0 3px rgba(27, 77, 137, 0.14);
+}
+
+.split-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.segmented-control {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.segmented-control button {
+  min-height: 38px;
+  border: 0;
+  border-radius: 6px;
+  color: #667085;
+  background: transparent;
+  font-weight: 800;
+}
+
+.segmented-control button.active {
+  color: #172033;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.12);
+}
+
+.primary-button {
+  width: 100%;
+  color: #ffffff;
+  background: #172033;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.search-field,
+.select-field {
+  position: relative;
+  width: min(230px, 100%);
+}
+
+.search-field svg,
+.select-field svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  color: #667085;
+  transform: translateY(-50%);
+}
+
+.search-field input,
+.select-field select {
+  padding-left: 38px;
+}
+
+.transaction-table {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 120px minmax(150px, 1.3fr) minmax(120px, 0.7fr) 110px 42px;
+  align-items: center;
+  gap: 14px;
+  min-height: 56px;
+  padding: 0 12px;
+  border: 1px solid #eef2f6;
+  border-radius: 8px;
+}
+
+.table-head {
+  min-height: 36px;
+  color: #667085;
+  background: #f8fafc;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.date-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #667085;
+  font-weight: 800;
+}
+
+.category-chip {
+  width: fit-content;
+  max-width: 100%;
+  padding: 6px 10px;
+  color: var(--chip-color);
+  background: color-mix(in srgb, var(--chip-color) 12%, white);
+  border-radius: 999px;
+  font-size: 0.83rem;
+  font-weight: 900;
+}
+
+.income-value,
+.expense-value {
+  font-weight: 900;
+  text-align: right;
+}
+
+.income-value {
+  color: #047857;
+}
+
+.expense-value {
+  color: #b42318;
+}
+
+.delete-button {
+  width: 34px;
+  height: 34px;
+  justify-self: end;
+  color: #98a2b3;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.delete-button:hover {
+  color: #b42318;
+  background: #fee4e2;
+}
+
+@media (max-width: 980px) {
+  .summary-grid,
+  .workspace,
+  .chart-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .workspace,
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    width: min(100% - 20px, 1180px);
+    padding-top: 20px;
+  }
+
+  .topbar,
+  .section-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .summary-grid,
+  .split-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .filters,
+  .search-field,
+  .select-field {
+    width: 100%;
+  }
+
+  .transaction-table {
+    gap: 12px;
+  }
+
+  .table-head {
+    display: none;
+  }
+
+  .table-row {
+    grid-template-columns: 1fr auto;
+    gap: 8px 12px;
+    min-height: auto;
+    padding: 14px;
+  }
+
+  .date-cell,
+  .category-chip,
+  .income-value {
+    grid-column: 1;
+  }
+
+  .expense-value {
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .delete-button {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
+
+@media (max-width: 520px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .analytics-panel,
+  .entry-panel,
+  .transactions-section,
+  .metric-card {
+    padding: 16px;
+  }
+
+  .bar-chart {
+    gap: 7px;
+    height: 220px;
+  }
+
+  .bar-value {
+    font-size: 0.68rem;
+  }
+}
